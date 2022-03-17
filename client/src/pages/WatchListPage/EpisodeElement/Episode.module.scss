@@ -1,0 +1,15 @@
+.episode {
+    color: aqua;
+    &__strike {
+        text-decoration: line-through;
+    }
+    &__normal {
+        text-decoration: none;
+    }
+    &__delete {
+        color: red;
+    }
+    &__choose {
+        color: green;
+    }
+}

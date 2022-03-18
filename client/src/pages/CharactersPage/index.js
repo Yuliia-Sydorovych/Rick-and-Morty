@@ -1,1 +1,1 @@
-export { default as Characters } from './Characters.jsx';
+export { Characters } from './Characters.jsx';

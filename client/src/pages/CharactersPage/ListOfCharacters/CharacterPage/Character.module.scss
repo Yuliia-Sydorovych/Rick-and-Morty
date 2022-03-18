@@ -1,0 +1,43 @@
+@import '../../../../consts/variables.scss';
+
+.profile {
+    height: 100%;
+    background: $backGroundImage;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    &__title {
+        color: $fontBlue;
+        font-size: 35px;
+        background-color: white;
+        width: fit-content;
+        height: 55px;
+        margin-bottom: 10px;
+        text-align: center;
+        border-radius: 20px;
+        padding: 10px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    &__img {
+        img {
+            height: 500px;
+            border-radius: 50%;
+        }
+    }
+    &__info {
+        margin-left: 20px;
+        color: $fontBlue;
+        border-radius: 10px;
+        background-color: white;
+        padding: 10px;
+    }
+}

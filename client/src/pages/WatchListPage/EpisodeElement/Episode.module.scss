@@ -1,15 +1,36 @@
+@import '../../../../src/consts/variables.scss';
+
 .episode {
-    color: aqua;
+    display: flex;
+    flex-direction: row;
+
+    div {
+        width: 300px;
+        height: 30px;
+        border: 1px solid silver;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        background-color: #ecf0a0;
+        color: #085666;
+    }
+
     &__strike {
         text-decoration: line-through;
     }
+
     &__normal {
         text-decoration: none;
     }
-    &__delete {
-        color: red;
+
+    &__delete, &__check {
+        height: 30px;
+        img {
+            height: 25px;
+        }
     }
-    &__choose {
-        color: green;
+    
+    button {
+        background-color: transparent;
+        border: none;
     }
 }

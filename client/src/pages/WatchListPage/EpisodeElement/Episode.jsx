@@ -1,5 +1,7 @@
-import React from "react";
+import React from 'react';
 import styles from './Episode.module.scss';
+import Trash from '../../../assets/images/trash.png';
+import Check from '../../../assets/images/check.png';
 
 const Episode = ({ episode, completeEpisode, removeEpisode }) => {
     return (
@@ -8,9 +10,11 @@ const Episode = ({ episode, completeEpisode, removeEpisode }) => {
                 {episode.episode}
             </div>
             <button onClick={() => removeEpisode(episode.id)} className={styles.episode__delete}>
-                Delete
+                <img src={Trash} alt='trash'/>
             </button>
-            <input type='checkbox' onClick={() => completeEpisode(episode.id)} className={styles.episode__choose}/>
+            <button onClick={() => completeEpisode(episode.id)} id='check' className={styles.episode__check}>
+                <img src={Check} alt='check'/>
+            </button>
         </div>
     );
 }

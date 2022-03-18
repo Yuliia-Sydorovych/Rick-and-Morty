@@ -1,3 +1,22 @@
-* {
-    //background-color: red;
+@import '../../../src/consts/variables.scss';
+
+.table {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: $backGroundImage;
+
+    &__todo {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        height: 30px;
+        z-index: 3;
+        background-color: $fontBlue;
+        border: 1px solid $fontYellow;
+        border-radius: 5px;
+    }
+    
 }

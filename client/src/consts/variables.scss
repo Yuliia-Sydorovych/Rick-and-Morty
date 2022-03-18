@@ -1,0 +1,15 @@
+$fontBlue: #16acc9;
+$fontYellow: #d2da4b;
+$backLight: #86a1a7;
+$backGroundImage: url('../assets/images/space.jpg');
+$backGroundImageWatchList: url('../assets/images/space7.jpg');
+%baseFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex($flexDirection: row) {
+  margin-left: 15px;
+  margin-top: 15px;
+}

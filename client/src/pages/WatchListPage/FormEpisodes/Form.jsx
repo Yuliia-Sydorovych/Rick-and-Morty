@@ -1,4 +1,5 @@
 import React, { useState }from 'react';
+import styles from '../FormEpisodes/Form.module.scss';
 
 const Form = ({ addEpisode }) => {
     const [input, setInput] = useState('');
@@ -12,14 +13,16 @@ const Form = ({ addEpisode }) => {
         setInput(e.currentTarget.value)
     }
     return (
-        <form onSubmit={submitChandges}>
-            <input
-                value={input}
-                type='text'
-                onChange={changeValue}
-                placeholder='Enter episode'
-            />
-            <button>save</button>
+        <form onSubmit={submitChandges} className={styles.form}>
+            <div className={styles.form__input}>
+                <input
+                    value={input}
+                    type='text'
+                    onChange={changeValue}
+                    placeholder='Enter episode' />
+                <button className={styles.form__save}>save</button>
+            </div>
+            
         </form>
     );
 }

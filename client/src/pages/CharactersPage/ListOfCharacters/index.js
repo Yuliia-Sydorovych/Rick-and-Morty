@@ -1,0 +1,1 @@
+export { ListOfCharacters } from './ListOfCharacters.jsx';

@@ -1,0 +1,25 @@
+@import '../../../src/consts/variables.scss';
+
+.header {
+    height: 100%;
+    width: 100%;
+    background: $backGroundImage;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    &__component {
+        background-color: rgb(31, 34, 48);
+        padding: 20px;
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 45px;
+        text-align: center;
+        position: relative;
+        z-index: 3;
+        color: $fontYellow;
+        
+    }
+}

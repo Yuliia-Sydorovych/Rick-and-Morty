@@ -1,6 +1,7 @@
 import React, { useState, useEffect }from 'react';
 import Episode from './EpisodeElement/Episode';
 import Form from './FormEpisodes/Form';
+import styles from '../WatchListPage/WatchList.module.scss';
 
 const getLocalEpisodes = () => {
     let list = localStorage.getItem('list');
@@ -38,9 +39,11 @@ const WatchList = () => {
             episode.id === id ? { ...episode, complete : !episode.complete } : { ...episode })])
     }
     return (
-        <div>
-            Watch List
+        <div className={styles.header}>
+            <div className={styles.header__component}>
+                <div className={styles.header__title}>Watch List</div>
             <Form addEpisode={addEpisode}/>
+
             {episodes.map((episode) => {
                 return (
                     <Episode
@@ -51,6 +54,8 @@ const WatchList = () => {
                     />
                 )
             })}
+            </div>
+            
         </div>
     );
 }

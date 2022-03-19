@@ -2,15 +2,15 @@ import React from 'react';
 import ListOfCharacters from './ListOfCharacters/ListOfCharacters';
 import routes from '../../configs/routes';
 import { Link } from 'react-router-dom';
-import styles from './Characters.module.scss';
+import styles from '../../consts/styles/Characters.module.scss';
 
 const Characters = () => {
     return (
-        <div className={styles.table}>
-            <button className={styles.table__todo}>
+        <div className={styles.characters}>
+            <button className={styles.characters__todo}>
                 <Link 
                     to={routes.pathToWatchListPage} 
-                    style={{ textDecoration: 'none', color: '#d2da4b' }}>
+                    style={{ textDecoration: 'none', fontWeight: 'bold', color: 'rgb(20, 9, 87)' }}>
                     Watch List
                 </Link>
             </button>

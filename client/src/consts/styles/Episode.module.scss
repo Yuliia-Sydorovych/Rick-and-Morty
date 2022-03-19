@@ -1,0 +1,60 @@
+@import '../variables.scss';
+
+.episode {
+    display: flex;
+    flex-direction: row;
+
+    & > div {
+        width: 300px;
+        height: 28px;
+        margin-bottom: 10px;
+        border-radius: $borderRadius;
+        background-color: #ecf0a0;
+        color: #031e24;
+        padding: 5px;
+    }
+
+    &__strike {
+        text-decoration: line-through;
+    }
+
+    &__normal {
+        text-decoration: none;
+    }
+
+    &__delete, &__check {
+        height: 30px;
+
+        & > img {
+            height: 25px;
+        }
+    }
+    
+    & > button {
+        background-color: transparent;
+        border: none;
+    }
+}
+@media screen and (max-width: 600px) {
+    .episode {
+        & > div {
+            width: 143px;
+            height: 20px;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        &__delete, &__check {
+            height: 20px;
+
+            & > img {
+                height: 20px;
+            }
+        }
+        
+        & > button {
+            background-color: transparent;
+            border: none;
+        }
+    }
+}

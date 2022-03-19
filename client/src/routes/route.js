@@ -1,7 +1,7 @@
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import routes from '../configs/routes';
 import Characters from '../pages/CharactersPage/Characters';
-import Character from '../../src/pages/CharactersPage/ListOfCharacters/CharacterPage/Character';
+import Character from '../pages/CharactersPage/ListOfCharacters/components/CharacterPage/Character';
 import WatchList from '../pages/WatchListPage/WatchList';
 
 const Routes = () => {

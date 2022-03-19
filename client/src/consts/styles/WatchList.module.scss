@@ -1,18 +1,19 @@
-@import '../../../src/consts/variables.scss';
+@import '../variables.scss';
 
-.header {
+.watchList {
     height: 100%;
     width: 100%;
-    background: $backGroundImage;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     
     &__component {
-        background-color: rgb(31, 34, 48);
+        background-color: rgb(46, 49, 59);
         padding: 20px;
+        border-radius: $borderRadius;
     }
+
     &__title {
         font-weight: 700;
         font-size: 45px;
@@ -20,6 +21,16 @@
         position: relative;
         z-index: 3;
         color: $fontYellow;
-        
+    }
+}
+@media screen and (max-width: 600px) {
+    .watchList {
+        &__component {
+            padding: 10px;
+        }
+    
+        &__title {
+            font-size: 25px;
+        }
     }
 }

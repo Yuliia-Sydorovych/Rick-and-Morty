@@ -5,6 +5,7 @@
 }
 
 html, body, #root {
+  background: url('../src/assets/images/planets.jpg');
   height: 100%;
   font-family: 'Creepster', cursive;
   font-weight: 700;

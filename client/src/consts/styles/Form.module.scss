@@ -1,0 +1,50 @@
+@import '../variables.scss';
+
+.form {
+    display: flex;
+    flex-direction: row;
+
+    &__input {
+        
+        margin-bottom: 20px;
+        margin-top: 50px;
+        
+        & > input {
+            padding: 5px;
+            height: 30px;
+            width: 300px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+        }
+    }
+
+    &__save {
+        height: 39px;
+        width: 70px;
+        border-radius: 0 5px 5px 0;
+        margin-left: 10px;
+        border: none;
+        background-color: $fontYellow;
+        color: #031e24;
+        font-weight: bold;
+    }
+}
+@media screen and (max-width: 600px) {
+    .form {
+        &__input {
+            margin-bottom: 10px;
+            margin-top: 30px;
+            
+            & > input {
+                padding: 2px;
+                height: 25px;
+                width: 150px;
+            }
+        }
+
+        &__save {
+            height: 29px;
+            margin-left: 5px;
+        }
+    }
+}

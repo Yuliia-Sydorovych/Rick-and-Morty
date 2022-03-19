@@ -1,0 +1,30 @@
+@import '../variables.scss';
+
+.characters {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    &__todo {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        height: 30px;
+        z-index: 3;
+        @extend %fontFamily;
+        background-color: $backCard;
+        border: 1px solid $fontYellow;
+        border-radius: $borderRadius;
+    }
+}
+@media screen and (max-width: 600px) {
+    .characters {
+        &__todo {
+            right: 3px;
+            top: 3px;
+            height: 25px;
+        }
+    }
+}

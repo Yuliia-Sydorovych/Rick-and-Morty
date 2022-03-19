@@ -1,15 +1,15 @@
-$fontBlue: #16acc9;
+$fontBlue: rgb(5, 2, 29);
 $fontYellow: #d2da4b;
 $backLight: #86a1a7;
-$backGroundImage: url('../assets/images/space.jpg');
-$backGroundImageWatchList: url('../assets/images/space7.jpg');
-%baseFlex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+$backCard:rgb(240, 245, 255);
+$backGroundImage: url('../assets/images/planets.jpg');
+$borderRadius: 5px;
+
+%fontFamily {
+  font-family: 'Creepster', cursive;
 }
 
 @mixin flex($flexDirection: row) {
-  margin-left: 15px;
-  margin-top: 15px;
+  display: flex;
+  flex-direction: $flexDirection; 
 }

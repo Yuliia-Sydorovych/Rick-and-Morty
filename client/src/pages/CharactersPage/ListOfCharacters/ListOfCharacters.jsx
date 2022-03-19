@@ -1,73 +1,52 @@
 import React, { useState, useEffect } from 'react';
-import styles from './ListOfCharacters.module.scss';
 import axios from '../../../hooks/useAxios';
-import route from '../../../configs/routes';
 import Logo from '../../../assets/images/logo.png';
-import { Link } from 'react-router-dom';
+import MapCharacters from './components/MapCharacters/MapCharacters';
+import Pagination from './components/Pagination/Pagination';
+import styles from '../../../consts/styles/ListOfCharacters.module.scss';
+
+const getPage = () => {
+
+    const currentPage = localStorage.getItem('currentPage');
+
+    if (currentPage) {
+        return JSON.parse(localStorage.getItem('currentPage'));
+    } else {
+        return [];
+    }
+};
 
 const ListOfCharacters = () => {
-    const BASE_URL = 'https://rickandmortyapi.com/api/character';
 
-  const [chars, setState] = useState([]);
-  const [count, setCount] = useState(0);
+    const BASE_URL = 'https://rickandmortyapi.com/api/character/';
 
-  useEffect(() => {
+    const [chars, setChars] = useState([]);
+    const [page, setPage] = useState(getPage());
+    const [totalPage, setTotalPage] = useState(0);
+
+    useEffect(() => {
       axios
-      .get(`${BASE_URL}`)
-      .then(response => {
-          console.log(response.data.results)
-          setState(response.data.results)
-          setCount(response.data.info.pages)
-      })
-      .catch(err => {
-          console.log(err);
-      })
-    }, []);
+        .get(`${BASE_URL}?page=${page}`)
+        .then(response => {
+            setChars(response.data.results)
+            setTotalPage(response.data.info.pages)
+            localStorage.setItem('currentPage', JSON.stringify(page))
+        })
+        .catch(err => {
+            console.log(err);
+        })
+    }, [page]);
+
+    const handleClick = num => {
+        setPage(num);  
+    }
     return (
         <div className={styles.list}>
             <div className={styles.list__logo}>
                 <img src={Logo} alt='logo'/>
-                <select>
-                    <option>Species</option>
-                    <option>Human</option>
-                    <option>Alien </option>
-                </select>
-                <select>
-                    <option>Status</option>
-                    <option>Alive</option>
-                    <option>Dead </option>
-                    <option>Unknown</option>
-                </select>
-                <select>
-                    <option>Gender</option>
-                    <option>Female</option>
-                    <option>Male </option>
-                    <option>Genderless</option>
-                    <option>Unknown</option>
-                </select>
             </div>
-            <div className={styles.list__characters}>
-            {
-            chars.map(c => 
-              <Link 
-                key={c.id}
-                style={{ textDecoration: 'none' }}
-                to={{ 
-                    pathname: `${route.pathToCharacterPage}`,
-                    propsSearch: c 
-                }}>
-                
-            <div key={c.id} className={styles.list__card}>
-                <div>
-                  <img src={c.image} alt='avatar'/>
-                </div>
-                <div>{c.name}</div>
-            </div>
-            </Link>
-            )
-          }
-            </div>
-            
+            <MapCharacters chars={chars} page={page}/>
+            <Pagination totalPage={totalPage} handleClick={handleClick}/>
         </div>
     );
 }

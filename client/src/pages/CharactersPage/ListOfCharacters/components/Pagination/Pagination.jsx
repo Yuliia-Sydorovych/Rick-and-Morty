@@ -7,12 +7,15 @@ const Pagination = ({totalPage, handleClick}) => {
     return (
         <div className={styles.pagination}>
             {pages.map(num => (
-                <button 
-                key={num}
-                onClick={() => handleClick(num)}
-                className={styles.pagination__button}>
-                    {num}
-                </button>
+                <div key={num}>
+                    <button 
+                        key={num}
+                        onClick={() => handleClick(num)}
+                        className={styles.pagination__button}>
+                            {num}
+                    </button>
+                </div>
+                
             ))}
         </div>
     );

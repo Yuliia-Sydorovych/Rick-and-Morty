@@ -1,9 +1,10 @@
 import api from '../hooks/useAxios';
 
-const getCharacterById = (id) => {
-  return api.get(`/character/${id}`);
+const getCharacters = () => {
+  const characterList = api;
+  return characterList;
 };
 
 export {
-  getCharacterById
+  getCharacters
 };

@@ -1,9 +1,7 @@
 @import '../variables.scss';
 
 .characters {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    @include flex();
     justify-content: center;
     align-items: center;
 
@@ -15,7 +13,7 @@
         z-index: 3;
         @extend %fontFamily;
         background-color: $backCard;
-        border: 1px solid $fontYellow;
+        border: 1px solid $fontBlue;
         border-radius: $borderRadius;
     }
 }

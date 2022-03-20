@@ -4,8 +4,9 @@ import Form from './components/FormEpisodes/Form';
 import styles from '../../consts/styles/WatchList.module.scss';
 
 const getLocalEpisodes = () => {
+    
     let list = localStorage.getItem('list');
-    console.log(list);
+
     if (list) {
         return JSON.parse(localStorage.getItem('list'));
     } else {
@@ -22,7 +23,7 @@ const WatchList = () => {
     }, [episodes]);
 
     const addEpisode = (input) => {
-        if(input) {
+        if(input && episodes.length<6) {
             const newEpisode = {
                 id: Math.random().toString(20).substring(1,10),
                 episode: input,
@@ -42,18 +43,17 @@ const WatchList = () => {
         <div className={styles.watchList}>
             <div className={styles.watchList__component}>
                 <div className={styles.watchList__title}>Watch List</div>
-            <Form addEpisode={addEpisode}/>
-
-            {episodes.map((episode) => {
-                return (
-                    <Episode
-                        episode={episode}
-                        key={episodes.id}
-                        completeEpisode={completeEpisode}
-                        removeEpisode={removeEpisode}
-                    />
-                )
-            })}
+                <Form addEpisode={addEpisode}/>
+                {episodes.map((episode) => {
+                    return (
+                        <Episode
+                            episode={episode}
+                            key={episodes.id}
+                            completeEpisode={completeEpisode}
+                            removeEpisode={removeEpisode}
+                        />
+                    )
+                })}
             </div>
         </div>
     );

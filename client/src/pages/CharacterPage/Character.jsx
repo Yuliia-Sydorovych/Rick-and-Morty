@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../../../../../consts/styles/Character.module.scss';
+import styles from '../../consts/styles/Character.module.scss';
 
 const Character = (props) => {
     const person = props.location.propsSearch;

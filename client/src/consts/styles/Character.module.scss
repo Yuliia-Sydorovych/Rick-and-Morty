@@ -2,8 +2,7 @@
 
 .profile {
     height: 100%;
-    display: flex;
-    flex-direction: column;
+    @include flex();
     justify-content: center;
     align-items: center;
     
@@ -20,8 +19,7 @@
     }
 
     &__content {
-        display: flex;
-        flex-direction: row;
+        @include flex($flexDirection: row);
         justify-content: center;
         align-items: center;
     }

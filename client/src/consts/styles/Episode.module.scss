@@ -1,9 +1,8 @@
 @import '../variables.scss';
 
 .episode {
-    display: flex;
-    flex-direction: row;
-
+    @include flex($flexDirection: row);
+    
     & > div {
         width: 300px;
         height: 28px;
@@ -24,10 +23,13 @@
 
     &__delete, &__check {
         height: 30px;
-
+        width: 30px;
         & > img {
             height: 25px;
         }
+    }
+    &__delete {
+        margin-right: 10px;
     }
     
     & > button {

@@ -10,11 +10,11 @@
         background-color: $backCard;
         color: $fontBlue;
         font-weight: bold;
-        border: none;
+        border: 1px solid $fontBlue;
         margin-right: 2px;
         border-radius: $borderRadius;
     }
     &__button:focus {
-        background-color: rgb(155, 138, 138);
+        background-color: rgb(180, 172, 99);
     }
 }

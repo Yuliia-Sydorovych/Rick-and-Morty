@@ -1,15 +1,18 @@
 $fontBlue: rgb(5, 2, 29);
-$fontYellow: #d2da4b;
+$fontYellow: #d6db6b;
 $backLight: #86a1a7;
-$backCard:rgb(240, 245, 255);
+$backCard:#dfe48f;
 $backGroundImage: url('../assets/images/planets.jpg');
 $borderRadius: 5px;
 
 %fontFamily {
   font-family: 'Creepster', cursive;
+  font-weight: bold;
+  color: $fontBlue;
 }
 
-@mixin flex($flexDirection: row) {
+@mixin flex($flexDirection: column) {
   display: flex;
-  flex-direction: $flexDirection; 
+  flex-direction: $flexDirection;
+  flex-wrap: wrap;
 }

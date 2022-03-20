@@ -3,8 +3,7 @@
 .watchList {
     height: 100%;
     width: 100%;
-    display: flex;
-    flex-direction: row;
+    @include flex($flexDirection: row);
     justify-content: center;
     align-items: center;
     
@@ -12,6 +11,7 @@
         background-color: rgb(46, 49, 59);
         padding: 20px;
         border-radius: $borderRadius;
+        height: 450px;
     }
 
     &__title {
@@ -27,6 +27,7 @@
     .watchList {
         &__component {
             padding: 10px;
+            height: 350px;
         }
     
         &__title {

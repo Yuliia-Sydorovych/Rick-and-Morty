@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from '../../../hooks/useAxios';
 import Logo from '../../../assets/images/logo.png';
-import MapCharacters from './components/MapCharacters/MapCharacters';
+import FilteredCharacters from './components/FilteredCharacters/FilteredCharacters';
 import Pagination from './components/Pagination/Pagination';
 import styles from '../../../consts/styles/ListOfCharacters.module.scss';
 
@@ -40,12 +40,13 @@ const ListOfCharacters = () => {
     const handleClick = num => {
         setPage(num);  
     }
+
     return (
         <div className={styles.list}>
             <div className={styles.list__logo}>
                 <img src={Logo} alt='logo'/>
             </div>
-            <MapCharacters chars={chars} page={page}/>
+            <FilteredCharacters chars={chars}/>
             <Pagination totalPage={totalPage} handleClick={handleClick}/>
         </div>
     );

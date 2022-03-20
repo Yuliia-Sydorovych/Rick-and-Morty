@@ -10,7 +10,8 @@ const Characters = () => {
             <button className={styles.characters__todo}>
                 <Link 
                     to={routes.pathToWatchListPage} 
-                    style={{ textDecoration: 'none', fontWeight: 'bold', color: 'rgb(20, 9, 87)' }}>
+                    style={{ textDecoration: 'none', fontWeight: 'bold', color: 'rgb(20, 9, 87)' }}
+                >
                     Watch List
                 </Link>
             </button>

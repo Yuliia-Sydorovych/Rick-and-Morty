@@ -1,14 +1,13 @@
 @import '../variables.scss';
 
 .form {
-    display: flex;
-    flex-direction: row;
+    @include flex($flexDirection: row);
 
     &__input {
-        
         margin-bottom: 20px;
         margin-top: 50px;
-        
+        @include flex($flexDirection: row);
+
         & > input {
             padding: 5px;
             height: 30px;
@@ -19,7 +18,7 @@
     }
 
     &__save {
-        height: 39px;
+        height: 40px;
         width: 70px;
         border-radius: 0 5px 5px 0;
         margin-left: 10px;
@@ -27,6 +26,7 @@
         background-color: $fontYellow;
         color: #031e24;
         font-weight: bold;
+        @extend %fontFamily;
     }
 }
 @media screen and (max-width: 600px) {

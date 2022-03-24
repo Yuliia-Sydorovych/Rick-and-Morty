@@ -47,9 +47,11 @@ const Characters = () => {
     }
 
     const resetFilters = () => {
-        setParameter('');
-        setFiltred('');
-        setPage(1);
+        if( parameter || page !== 1) {
+            setParameter('');
+            setFiltred([]);
+            setPage(1);
+        }
     }
 
     return (

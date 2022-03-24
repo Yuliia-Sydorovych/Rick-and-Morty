@@ -6,15 +6,7 @@
     align-items: center;
 
     &__todo {
-        position: absolute;
-        right: 10px;
-        top: 10px;
-        height: 30px;
-        z-index: 3;
-        @extend %fontFamily;
-        background-color: $backCard;
-        border: 1px solid $fontBlue;
-        border-radius: $borderRadius;
+        @extend %buttonStyle;
     }
 
     &__content {
@@ -75,6 +67,7 @@
         &__logo {
             & > img {
                 width: 200px;
+                margin-top: 50px;
             }
         }
         

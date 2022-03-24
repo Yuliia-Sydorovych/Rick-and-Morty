@@ -11,6 +11,18 @@ $borderRadius: 5px;
   color: $fontBlue;
 }
 
+%buttonStyle {
+  @extend %fontFamily;
+  background-color: $backCard;
+  border: 1px solid $fontBlue;
+  border-radius: $borderRadius;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  height: 30px;
+  z-index: 3;
+}
+
 @mixin flex($flexDirection: column) {
   display: flex;
   flex-direction: $flexDirection;

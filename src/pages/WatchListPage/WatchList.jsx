@@ -1,6 +1,8 @@
 import React, { useState, useEffect }from 'react';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import Episode from './components/EpisodeElement/Episode';
 import Form from './components/FormEpisodes/Form';
+import routes from '../../configs/routes';
 import styles from './WatchList.module.scss';
 
 const getLocalEpisodes = () => {
@@ -41,6 +43,14 @@ const WatchList = () => {
     }
     return (
         <div className={styles.watchList}>
+            <button className={styles.watchList__todo}>
+                <Link 
+                    to={routes.pathToCharactersPage} 
+                    style={{ textDecoration: 'none', fontWeight: 'bold', color: 'rgb(20, 9, 87)' }}
+                >
+                    Characters
+                </Link>
+            </button>
             <div className={styles.watchList__component}>
                 <div className={styles.watchList__title}>Watch List</div>
                 <Form addEpisode={addEpisode}/>

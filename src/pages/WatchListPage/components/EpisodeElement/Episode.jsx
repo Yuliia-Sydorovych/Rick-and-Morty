@@ -1,7 +1,7 @@
 import React from 'react';
 import Trash from '../../../../assets/images/trash.png';
 import Check from '../../../../assets/images/check.png';
-import styles from '../../../../consts/styles/Episode.module.scss';
+import styles from './Episode.module.scss';
 
 const Episode = ({ episode, completeEpisode, removeEpisode }) => {
     return (

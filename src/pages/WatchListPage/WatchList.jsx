@@ -1,7 +1,7 @@
 import React, { useState, useEffect }from 'react';
 import Episode from './components/EpisodeElement/Episode';
 import Form from './components/FormEpisodes/Form';
-import styles from '../../consts/styles/WatchList.module.scss';
+import styles from './WatchList.module.scss';
 
 const getLocalEpisodes = () => {
     

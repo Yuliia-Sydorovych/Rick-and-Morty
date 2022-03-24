@@ -1,5 +1,5 @@
 import React, { useState }from 'react';
-import styles from '../../../../consts/styles/Form.module.scss';
+import styles from './Form.module.scss';
 
 const Form = ({ addEpisode }) => {
     

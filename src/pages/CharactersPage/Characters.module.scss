@@ -1,9 +1,22 @@
-@import '../variables.scss';
+@import '../../consts/variables.scss';
 
-.filterCharacter {
+.characters {
     @include flex();
     justify-content: center;
-    
+    align-items: center;
+
+    &__todo {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        height: 30px;
+        z-index: 3;
+        @extend %fontFamily;
+        background-color: $backCard;
+        border: 1px solid $fontBlue;
+        border-radius: $borderRadius;
+    }
+
     &__content {
         @include flex($flexDirection: row);
         justify-content: center;
@@ -57,8 +70,14 @@
 }
 @media screen and (max-width: 600px) {
     
-    .filterCharacter {
+    .characters {
 
+        &__logo {
+            & > img {
+                width: 200px;
+            }
+        }
+        
         &__nameCharacter {
             font-size: 15px;
         }

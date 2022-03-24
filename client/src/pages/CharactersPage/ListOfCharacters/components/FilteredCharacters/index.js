@@ -1,1 +1,0 @@
-export { FilteredCharacters } from './FilteredCharacters.jsx';

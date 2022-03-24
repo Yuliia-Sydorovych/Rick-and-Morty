@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../../../../../consts/styles/Pagination.module.scss';
+import styles from './Pagination.module.scss';
 
 const Pagination = ({totalPage, handleClick}) => {
     const pages = [...Array(totalPage).keys()].map(num => num+1);

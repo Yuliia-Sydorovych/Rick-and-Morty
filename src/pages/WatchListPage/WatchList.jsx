@@ -48,7 +48,7 @@ const WatchList = () => {
                     return (
                         <Episode
                             episode={episode}
-                            key={episodes.id}
+                            key={episode.id}
                             completeEpisode={completeEpisode}
                             removeEpisode={removeEpisode}
                         />
